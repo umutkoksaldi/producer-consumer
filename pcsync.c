@@ -68,9 +68,16 @@ void* consumer(void *arg) {
     int index = 0;
     buffer_t *props = (buffer_t *) arg;
     while (index < num_of_records) {
-        printf("test\n");
+        printf("test lock\n");
         pthread_mutex_lock(&bufferLock);
-        pthread_cond_wait(&can_consume, &bufferLock);
+        printf("test cond wait\n");
+        int sum = 0;
+        for (int i = 0; i < producerCount; i++){
+            sum += indices[i];
+        }
+        if(sum == 0) {
+            pthread_cond_wait(&can_consume, &bufferLock);
+        }
         printf("test after cond\n");
         for (int i = 0; i < producerCount; i++) {
             if (indices[i] == 1) {
