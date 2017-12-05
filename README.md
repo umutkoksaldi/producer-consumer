@@ -1,2 +1,2 @@
-# producer-consumer
-A producer consumer problem implemented in C using bounded buffers
+Umut Mucahit Koksaldi
+21402234
