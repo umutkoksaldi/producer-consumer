@@ -19,4 +19,4 @@ where:
  
  ```<producerid> <sid> <firstname> <lastname> <cgpa>```
 
-for each row record contained within
+for each row record contained within.
