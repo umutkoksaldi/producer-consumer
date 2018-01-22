@@ -18,3 +18,5 @@ where:
  <b>input_file</b> should be in the following format: 
  
  ```<producerid> <sid> <firstname> <lastname> <cgpa>```
+
+for each row record contained within
